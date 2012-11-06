@@ -56,7 +56,7 @@ void mousePressed() {
   OscMessage myMessage = new OscMessage("/proTOosculator");  // starts with an ADDRESS PATTERN --> = / + any string you like
   
   int rVal = (int)random(0,127);                       // create the value to send
-  myMessage.add( 1 );                               // add an int to the osc message
+  myMessage.add( rVal );                               // add an int to the osc message
 
   oscP5.send(myMessage, remoteLocation);               // actually do the sending
    
